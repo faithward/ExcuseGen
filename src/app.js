@@ -30,13 +30,13 @@ window.onload = function() {
 
   function generateExcuse() {
     let str = "";
-    var subIndex = Math.floor(Math.random() * 6);
+    var subIndex = Math.floor(Math.random() * subjects.length);
     str += subjects[subIndex];
-    var actIndex = Math.floor(Math.random() * 5);
+    var actIndex = Math.floor(Math.random() * action.length);
     str += action[actIndex];
-    var victimIndex = Math.floor(Math.random() * 5);
+    var victimIndex = Math.floor(Math.random() * victim.length);
     str += victim[victimIndex];
-    var timeIndex = Math.floor(Math.random() * 5);
+    var timeIndex = Math.floor(Math.random() * time.length);
     str += time[timeIndex];
     var h3 = document.querySelector("#myExcuse");
     h3.innerText = str;
